@@ -1,0 +1,247 @@
+@font-face
+{
+	font-family:constance;
+	src:url("constance/Constance.ttf");
+}
+@font-face
+{
+	font-family:blackthorns;
+	src:url("blackthorns/blackthorns-black.ttf");
+}
+@font-face
+{
+	font-family:discoteca;
+	src:url("discoteca_rounded/DiscotecaRounded.ttf");
+}
+@font-face
+{
+	font-family:heavitas;
+	src:url("heavitas/Heavitas.ttf");
+}
+
+body,html
+{
+	height:100%;
+	width:100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	/*align-items: center;*/
+	font-family:constance;
+	background:-webkit-linear-gradient(#666,#000);
+	background:-moz-linear-gradient(#666,#000);
+}
+
+
+
+
+div#jumbo
+{
+	width:100%;
+	height:100%;
+	display:table;
+	background:-moz-linear-gradient(#00ff67,#00ff67,#00ff67,#0077ff);
+	background:-webkit-linear-gradient(#00ff67,#00e267,#00f467,#0077ff);
+	text-align: center;
+}
+
+div#jumbo section
+{
+	display: table-cell;
+	font-family: blackthorns;
+	vertical-align: middle;
+}
+
+[type="checkbox"]
+{
+	display:none;
+}
+
+input[type="checkbox"]#play:checked+div
+{
+	display:none;
+}
+input[type="checkbox"]#play:checked+div+div
+{
+	display:block;
+}
+
+div#jumbo section label
+{
+	width:200px;
+	height:40px;
+	padding:10px 20px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size:120%;
+	border-radius: 10px;
+	border:2px solid #07f;
+	color:#07f;
+}
+div#jumbo section label:hover
+{
+	color:#07f;
+	text-shadow:0px 0px 1px #000;
+	border-color:#07f;
+	box-shadow: 0px 0px 10px #000;
+}
+div#jumbo section h1
+{
+	font-size:180%;
+	color:#07f;
+}
+div#container
+{
+	background:url("img2.jpg");
+	background-size: 250%;
+	margin:auto;
+	position:relative;
+	display:none;
+	box-shadow:0px 0px 50px #222;
+	border-radius: 10px;
+	height:80%;
+	width:45%;
+}
+table
+{
+	border-collapse: collapse;
+	border:none;
+	position: relative;
+	top:15%;
+	margin:auto;
+}
+
+span#messageBox
+{
+	position:relative;
+	top:-23%;
+	margin:auto;
+	height:120px;
+	width:300px;
+	border-radius: 20px;
+	background: #b60;
+	font-size:200%;
+	box-shadow: 8px 8px 6px #222;
+	text-align: center;
+	border:2px solid #fff;
+	color:#fff;
+	display:none;
+	font-family: constance,sans-serif;
+}
+
+.cell
+{
+	border: 4px solid #fff;
+	height : 100px;
+	width: 100px;
+	color:#fff;
+	text-align: center;
+	vertical-align: middle;
+	font-family: heavitas, discoteca,cursive, sans-serif;
+	font-size: 60px;
+	cursor:pointer;
+}
+
+#messageBox #text
+{
+	position:absolute;
+	left:30%;
+	top:20%;
+}
+button#replay
+{
+	position:absolute;
+	background:#ff0000;
+	border-radius: 10px;
+	font-family: constance;
+	border:2px solid #fff;
+	font-size:80%;
+	height: 40px;
+	padding:4px 8px;
+	color:#fff;
+	left:33%;
+	top:50%;
+}
+table tr:first-child td{
+	border-top:0;
+}
+
+
+table tr:last-child td{
+	border-bottom:0;
+}
+
+table tr td:first-child{
+	border-left:0;
+}
+table tr td:last-child{
+	border-right:0;
+}
+
+@media all and (max-width:800px)
+{
+	span#messageBox
+	{
+		top:-25%;
+		height:120px;
+		width:250px;
+		font-size:200%;
+	}
+	div#container
+	{
+		background-size: 300%;
+		height:70%;
+		width:60%;
+	}
+	.cell
+	{
+		height : 80px;
+		width: 80px;
+		font-size: 50px;
+	}
+}
+
+@media all and (max-width:650px)
+{
+	span#messageBox
+	{
+		top:-22%;
+		height:100px;
+		width:200px;
+		font-size:150%;
+	}
+	div#container
+	{
+		height:60%;
+		width:70%;
+	}
+	.cell
+	{
+		height : 60px;
+		width: 60px;
+		font-size: 45px;
+	}
+}
+
+@media all and (max-width:400px)
+{
+	span#messageBox
+	{
+		top:-15%;
+		height:100px;
+		width:200px;
+		font-size:150%;
+	}
+	div#container
+	{
+		height:50%;
+		width:80%;
+	}
+	.cell
+	{
+		height : 50px;
+		width: 50px;
+		font-size: 35px;
+	}
+}
